@@ -42,7 +42,7 @@ Follow these steps to install Comsg globally:
 ### 1. Clone the project
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Code14-ZeD/comsg
 cd comsg
 ```
 

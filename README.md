@@ -85,3 +85,11 @@ comsg
 ```
 
 Comsg will analyze your current Git stagged diff and generate a commit message based on your changes.
+
+## Customization
+
+Comsg allows customization of how commit messages are generated.
+
+### 🔧 Where to Customize
+
+All customization lives in the index.js file. Inside this file, look for the commit-tool's description, which defines how commit messages should be formatted and structured. Modify the description according to you and then do the Installation 2nd and 3rd step again and you are ready to use the customized tool.

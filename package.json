@@ -8,5 +8,10 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@openai/agents": "^0.3.2",
+    "dotenv": "^17.2.3",
+    "zod": "3"
   }
 }

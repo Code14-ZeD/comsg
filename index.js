@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Agent, run, tool } from "@openai/agents";
 import z from "zod";
 import { spawn } from "child_process";

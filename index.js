@@ -15,11 +15,11 @@ async function getDiff() {
 const commitTool = tool({
   name: "commit-tool",
   description:
-    "An intelligent tool that transforms raw Git diffs into clear, concise, and meaningful commit messages. Analyzes code changes and automatically generates commit messages that follow best-practice conventions such as Conventional Commits. Commit message should only be one line.",
+    "An intelligent tool that transforms raw Git diffs into clear, concise, and meaningful commit messages. Analyzes code changes and automatically generates commit messages that follow best-practice conventions such as Conventional Commits. Commit message should only be one line. And if there are no changes, respond with 'No change(s) to commit.'",
   parameters: z.object({}),
   execute: async (m) => {
     const diff = await getDiff();
-    console.log("Staged Changes:\n", diff);
+    diff && console.log("Staged Changes:\n", diff);
     return diff;
   },
 });

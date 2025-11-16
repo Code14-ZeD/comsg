@@ -92,4 +92,23 @@ Comsg allows customization of how commit messages are generated.
 
 ### 🔧 Where to Customize
 
-All customization lives in the index.js file. Inside this file, look for the commit-tool's description, which defines how commit messages should be formatted and structured. Modify the description according to you and then do the Installation 2nd and 3rd step again and you are ready to use the customized tool.
+All customization lives in the index.js file. Inside this file, look for the commit-tool's description, which defines how commit messages should be formatted and structured. Modify the description according to you.
+
+```js
+const commitTool = tool({
+  name: "commit-tool",
+  description: `
+    An intelligent tool that transforms raw Git diffs into commit messages...
+
+    Rules:
+    - Always generate commit messages in the format: <type>(<scope>): <description>
+    - Use types like feat, fix, docs, style, refactor, test, chore
+    - Scope is optional but should indicate the affected area
+    - Description should be imperative and concise
+    - Ensure commit descriptions are 50 characters or less
+    ...
+  `,
+
+```
+
+You are ready to use the customized tool.

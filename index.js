@@ -1,15 +1,29 @@
 import { Agent, run, tool } from "@openai/agents";
 import z from "zod";
-import { execSync } from "child_process";
+import { spawn } from "child_process";
 import "dotenv/config";
 
 async function getDiff() {
-  try {
-    const diff = execSync("git diff --staged", { encoding: "utf-8" });
-    return diff;
-  } catch (error) {
-    console.error("Error getting git diff:", error);
+  const git = spawn("git", ["diff", "--staged"]);
+
+  const decoder = new TextDecoder();
+  let output = "";
+
+  for await (const chunk of git.stdout) {
+    output += decoder.decode(chunk);
   }
+
+  for await (const chunk of git.stderr) {
+    console.error(decoder.decode(chunk));
+  }
+
+  const exitCode = await new Promise((resolve) => git.on("close", resolve));
+
+  if (exitCode !== 0) {
+    throw new Error("git diff failed");
+  }
+
+  return output;
 }
 
 const commitTool = tool({

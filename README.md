@@ -1,15 +1,23 @@
-# comsg
+# Comsg — Generate High-Quality Commit Messages from Git Diffs
 
-To install dependencies:
+Comsg is a developer tool that automatically converts Git diffs into clear, consistent, and context-aware commit messages. By analyzing code changes at a semantic level, Comsg helps maintain a clean commit history without requiring developers to manually craft messages for every change.
 
-```bash
-bun install
-```
+## Features
 
-To run:
+### 🔍 Diff Parsing
 
-```bash
-bun run index.ts
-```
+- Accepts raw Git diffs, staged changes, or patch files
+- Identifies added, removed, and modified lines
+- Handles multi-file diffs and complex change sets
 
-This project was created using `bun init` in bun v1.3.2. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+### 🤖 AI-Driven Commit Message Generation
+
+- Interprets the intent behind code changes
+- Generates concise commit titles and optional extended descriptions
+- Supports multi-scope summaries for large patches
+
+### 🧱 Commit Standard Support
+
+- Conventional Commits (e.g., `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`)
+- Semantic and team-customizable formats
+- Configurable message templates

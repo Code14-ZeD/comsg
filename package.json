@@ -2,7 +2,23 @@
   "name": "comsg",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "private": false,
+  "version": "0.1.0",
+  "description": "AI-powered commit message generator",
+  "author": "Vaibhav Jha <hello@vaibhavjha.dev>",
+  "license": "MIT",
+  "repository": "https://github.com/Code14-ZeD/comsg",
+  "homepage": "https://github.com/Code14-ZeD/comsg#readme",
+  "keywords": [
+    "commit",
+    "git",
+    "ai",
+    "agent",
+    "ai-commit",
+    "openai",
+    "customizable",
+    "conventional-commit"
+  ],
   "scripts": {
     "commit": "node index.js"
   },

@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AI-powered commit message generator",
   "author": "Vaibhav Jha <hello@vaibhavjha.dev>",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "customizable",
     "conventional-commit"
   ],
+  "installation": "npm install -g comsg",
   "scripts": {
     "commit": "node index.js"
   },

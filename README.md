@@ -39,6 +39,12 @@ These commit types help maintain consistent and meaningful commit history across
 
 Follow these steps to install Comsg globally:
 
+```bash
+npm i -g comsg
+```
+
+#### OR
+
 ### 1. Clone the project
 
 ```bash
